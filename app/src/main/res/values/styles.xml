@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="text_grey">
+        <item name="android:textColor">@color/white_gray</item>
+        <item name="fontFamily">@font/font_ibm</item>
+    </style>
+    <style name="text_dark">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="fontFamily">@font/font_ibm</item>
+    </style>
+
+</resources>
