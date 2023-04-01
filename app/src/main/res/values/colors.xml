@@ -10,4 +10,6 @@
     <color name="white_gray">#d7dadc</color>
     <color name="dark_gray">#292a2b</color>
     <color name="orange">#FF4500</color>
+    <color name="mtrl_textinput_default_box_stroke_color">#d7dadc</color>
+
 </resources>

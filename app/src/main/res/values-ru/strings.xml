@@ -3,4 +3,5 @@
     <string name="logo">Лого</string>
     <string name="welcome">Добро пожаловать</string>
     <string name="kavo">тык</string>
+    <string name="login">login</string>
 </resources>
