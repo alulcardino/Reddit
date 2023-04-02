@@ -5,13 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.romanmikhailenko.reddit.databinding.FragmentOnboardingBinding
+import com.romanmikhailenko.reddit.presentation.auth.LoginViewModel
 
 
 class OnboardingFragment : Fragment() {
 
     lateinit var binding: FragmentOnboardingBinding
+    private val viewModel by viewModels<LoginViewModel>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

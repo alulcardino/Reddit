@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.romanmikhailenko.reddit.R
@@ -15,6 +16,8 @@ import com.romanmikhailenko.reddit.databinding.FragmentOnboardingBinding
 
 class LoginFragment : Fragment() {
     lateinit var binding: FragmentLoginBinding
+    private val viewModel by viewModels<LoginViewModel>()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +25,9 @@ class LoginFragment : Fragment() {
     ): View? {
         binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
         binding.button.setOnClickListener {
+            if (viewModel.validateEmail()) {
+
+            }
             findNavController().navigate(R.id.action_loginFragment_to_mainFragment)
         }
         return binding.root
