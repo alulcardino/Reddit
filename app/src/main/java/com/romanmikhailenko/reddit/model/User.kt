@@ -1,4 +1,4 @@
-package com.romanmikhailenko.reddit.presentation.model
+package com.romanmikhailenko.reddit.model
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

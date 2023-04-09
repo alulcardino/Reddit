@@ -1,6 +1,7 @@
 package com.romanmikhailenko.reddit.presentation.auth
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,7 +37,6 @@ class LoginFragment : Fragment() {
 
     private fun init() {
         with(mBinding) {
-
             etEmail.doAfterTextChanged {
                 val email = etEmail.text.toString()
                 if (!validateEmail(email)) {
@@ -46,6 +46,7 @@ class LoginFragment : Fragment() {
                 }
                 btnLogin.isEnabled =
                     etLayoutPassword.error == null && etLayoutEmail.error == null
+                Log.d("My", "${etLayoutPassword.error} ${etLayoutEmail.error}")
             }
 
             etPassword.doAfterTextChanged {
@@ -57,6 +58,8 @@ class LoginFragment : Fragment() {
                 }
                 btnLogin.isEnabled =
                     etLayoutPassword.error == null && etLayoutEmail.error == null
+                Log.d("My", "${etLayoutPassword.error} ${etLayoutEmail.error}")
+
             }
 
             btnLogin.setOnClickListener {

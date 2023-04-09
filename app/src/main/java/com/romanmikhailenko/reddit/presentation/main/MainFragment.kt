@@ -1,39 +1,69 @@
 package com.romanmikhailenko.reddit.presentation.main
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
-import com.romanmikhailenko.reddit.R
-import com.romanmikhailenko.reddit.databinding.FragmentLoginBinding
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.romanmikhailenko.reddit.databinding.FragmentMainBinding
+import com.romanmikhailenko.reddit.model.Post
+import java.util.UUID
 
 class MainFragment : Fragment() {
-    lateinit var binding: FragmentMainBinding
+    private var _binding: FragmentMainBinding? = null
+    private val mBinding get() = _binding!!
+    private lateinit var mAdapter: MainAdapter
     private val viewModel by viewModels<MainViewModel>()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentMainBinding.inflate(layoutInflater, container, false)
-        return binding.root
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
+        _binding = FragmentMainBinding.inflate(layoutInflater, container, false)
+        return mBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
     }
 
+    override fun onStart() {
+        super.onStart()
+        init()
+        setList()
+    }
 
+    private fun init() {
+        mAdapter = MainAdapter()
+        with(mBinding.recycleView) {
+            adapter = mAdapter
+            layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
+
+    private fun setList() {
+        val items = List(20) {
+            Post(
+                UUID.randomUUID().toString(),
+                "sho",
+                "sho",
+                "sho",
+                "sho",
+                "sho",
+                "sho",
+                "",
+            )
+        }
+        mAdapter.setList(items)
+    }
 
 }

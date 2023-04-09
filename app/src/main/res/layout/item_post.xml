@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_default"
+    android:background="@color/dark_gray"
+    android:elevation="10dp">
+
+    <ImageView
+        android:id="@+id/ivPostAvatar"
+        android:layout_width="@dimen/size_avatar_post"
+        android:layout_height="@dimen/size_avatar_post"
+        android:layout_margin="@dimen/margin_default"
+        android:contentDescription="TODO"
+        android:scaleType="center"
+        android:src="@drawable/no_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPostTag"
+        style="@style/text_post"
+        android:layout_marginStart="@dimen/mini_margin"
+        android:layout_marginTop="@dimen/margin_default"
+        android:text="tag"
+        app:layout_constraintStart_toEndOf="@+id/ivPostAvatar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPostAuthor"
+        style="@style/text_post"
+
+        android:layout_margin="@dimen/mini_margin"
+        android:text="Posted by"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/ivPostAvatar"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostTag" />
+
+    <TextView
+        android:id="@+id/tvPostTime"
+        style="@style/text_post"
+        android:layout_margin="@dimen/mini_margin"
+        android:text="9h"
+        android:textSize="11sp"
+        app:layout_constraintStart_toEndOf="@+id/tvPostAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostTag" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="@dimen/size_avatar_post"
+        android:layout_height="@dimen/size_avatar_post"
+        android:layout_margin="@dimen/margin_default"
+        android:backgroundTint="@color/dark_gray"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_kebab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_margin="@dimen/margin_default"
+
+        android:backgroundTint="@color/blue"
+        android:clickable="true"
+        android:contentDescription="TODO"
+        android:focusable="true"
+        android:src="@drawable/ic_add"
+        app:fabCustomSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/tvPostTitle"
+        style="@style/text_post"
+        android:layout_margin="@dimen/margin_default"
+        android:text="title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostAuthor" />
+
+    <TextView
+        android:id="@+id/tvPostDescription"
+        style="@style/text_post"
+        android:layout_margin="@dimen/margin_default"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostTitle" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutUpDownVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_default"
+        android:layout_marginTop="@dimen/mini_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostDescription">
+
+        <ImageButton
+            android:id="@+id/btnUpVote"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/dark_gray"
+            android:contentDescription="TODO"
+            android:src="@drawable/arrow_up_bold_outline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvVotes"
+
+            style="@style/text_post"
+            android:text="23"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnUpVote"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btnDownVote"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+
+            android:backgroundTint="@color/dark_gray"
+            android:contentDescription="TODO"
+            android:src="@drawable/arrow_down_bold_outline"
+            app:layout_constraintStart_toEndOf="@+id/tvVotes"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPostShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/mini_margin"
+        android:layout_marginTop="@dimen/mini_margin"
+        android:layout_marginEnd="@dimen/margin_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostDescription"
+
+        >
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/dark_gray"
+            android:src="@drawable/ic_share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvShare"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvShare"
+            style="@style/text_post"
+            android:text="Share"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPostComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mini_margin"
+        app:layout_constraintEnd_toStartOf="@+id/layoutPostShare"
+        app:layout_constraintStart_toEndOf="@+id/layoutUpDownVote"
+        app:layout_constraintTop_toBottomOf="@+id/tvPostDescription">
+
+
+        <ImageButton
+            android:id="@+id/imComment"
+            android:layout_width="20dp"
+            android:layout_height="30dp"
+            android:backgroundTint="@color/dark_gray"
+            android:src="@drawable/ic_comment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvComment"
+            style="@style/text_post"
+            android:text="23"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imComment"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
