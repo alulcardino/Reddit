@@ -1,11 +1,11 @@
-package com.romanmikhailenko.reddit.presentation.main
+package com.romanmikhailenko.reddit.ui.main
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.romanmikhailenko.reddit.databinding.ItemPostBinding
-import com.romanmikhailenko.reddit.model.Post
+import com.romanmikhailenko.reddit.ui.model.Post
 
 class MainDiffCall(
     private val oldList: List<Post>,
@@ -33,7 +33,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.MainHolder>() {
         private val binding: ItemPostBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(post: Post) = with(binding) {
-            tvPostTag.text = post.tag
+          //  tvPostTag.text = post.tag
             tvPostAuthor.text = post.author
             tvPostDescription.text = post.description
             tvPostTitle.text = post.title

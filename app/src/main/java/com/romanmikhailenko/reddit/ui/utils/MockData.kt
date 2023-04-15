@@ -1,4 +1,4 @@
-package com.romanmikhailenko.reddit.presentation.utils
+package com.romanmikhailenko.reddit.ui.utils
 
 
 val imageUrls: MutableList<String> = mutableListOf(

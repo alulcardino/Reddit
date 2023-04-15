@@ -1,4 +1,4 @@
-package com.romanmikhailenko.reddit.presentation.onboarding
+package com.romanmikhailenko.reddit.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.Navigation
 import com.romanmikhailenko.reddit.databinding.FragmentOnboardingBinding
-import com.romanmikhailenko.reddit.presentation.auth.LoginViewModel
+import com.romanmikhailenko.reddit.ui.auth.LoginViewModel
 
 
 class OnboardingFragment : Fragment() {

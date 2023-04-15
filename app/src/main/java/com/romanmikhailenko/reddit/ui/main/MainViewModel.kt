@@ -1,4 +1,4 @@
-package com.romanmikhailenko.reddit.presentation.main
+package com.romanmikhailenko.reddit.ui.main
 
 import androidx.lifecycle.ViewModel
 

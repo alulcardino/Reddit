@@ -8,8 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_gray">#d7dadc</color>
-    <color name="dark_gray">#292a2b</color>
+    <color name="dark_gray">#31343f</color>
     <color name="orange">#FF4500</color>
     <color name="mtrl_textinput_default_box_stroke_color">#d7dadc</color>
     <color name="blue">#FF0896F4</color>
+    <color name="red">#FF0000</color>
+
 </resources>

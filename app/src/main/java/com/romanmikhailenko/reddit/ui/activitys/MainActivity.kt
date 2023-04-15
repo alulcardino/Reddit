@@ -1,20 +1,12 @@
-package com.romanmikhailenko.reddit
+package com.romanmikhailenko.reddit.ui.activitys
 
-import android.app.Activity
-import android.content.Intent
-import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.google.android.material.snackbar.Snackbar
+import com.romanmikhailenko.reddit.R
 import com.romanmikhailenko.reddit.databinding.ActivityMainBinding
-import com.romanmikhailenko.reddit.presentation.utils.APP_ACTIVITY
-import timber.log.Timber
+import com.romanmikhailenko.reddit.ui.utils.APP_ACTIVITY
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding

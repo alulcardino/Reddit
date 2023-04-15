@@ -1,4 +1,4 @@
-package com.romanmikhailenko.reddit.presentation.utils
+package com.romanmikhailenko.reddit.ui.utils
 
 import android.util.Patterns
 

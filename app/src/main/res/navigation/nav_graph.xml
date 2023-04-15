@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.romanmikhailenko.reddit.presentation.auth.LoginFragment"
+        android:name="com.romanmikhailenko.reddit.ui.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.romanmikhailenko.reddit.presentation.main.MainFragment"
+        android:name="com.romanmikhailenko.reddit.ui.fragments.HomeFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main" />
 </navigation>
